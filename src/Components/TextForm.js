@@ -45,15 +45,15 @@ export default function TexthtmlForm(props) {
                 <label htmlFor="myBox" className="form-label">What can I do for you</label>
                 <textarea className="form-control" value={text} onChange={handleOnChnage} id="myBox" rows="8"></textarea>
             </div>
-                <button className="btn btn-primary mx-2" onClick={handleUpClick}>Uppper Casse</button>
-                <button className="btn btn-primary mx-1" onClick={handleExtraSpace}>remove extra space</button>
-                <button className="btn btn-primary mx-2" onClick={handledownClick}>Lower Casse</button>
-                <button className="btn btn-primary mx-1" onClick={handleCompare}>compare</button>
-                <button className="btn btn-primary mx-2" onClick={handleCopy}>copy</button>
+                <button className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>Uppper Casse</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpace}>remove extra space</button>
+                <button className="btn btn-primary mx-2 my-1" onClick={handledownClick}>Lower Casse</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={handleCompare}>compare</button>
+                <button className="btn btn-primary mx-2 my-1" onClick={handleCopy}>copy</button>
         </div>
         <div className="container">
             <h3>Summary</h3>
-            <p>{text.split(" ").length} words and {text.length} characters</p>
+            <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
             <p>{text}</p>
         </div>
             </>
